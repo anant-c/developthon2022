@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script type='text/javascript'
+    src='https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places,weather'></script>
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'bn,en,hi,mr,ml,pa,sd,kn,ur', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
@@ -79,16 +81,6 @@ function googleTranslateElementInit() {
                                  <h2>Help someone while travelling across towns!</h2>
                                  <p>Just enter the address where you are travelling and we'll match you with someone who need your help in that area. Don't worry your data is private with us. </p>
                              </div>
-
-                             <div class="contact-title">
-                                 <h2>Contact Details</h2>
-                                 <ol>
-                                     <li><i class="far fa-map-marker-check"></i>USA</li>
-                                     <li><i class="fal fa-mobile"></i>+91 9751791203 </li>
-                                     <li><i class="fal fa-envelope"></i>sales@smarteyeapps.com</li>
-                                     <li><i class="fal fa-clock"></i>Mon - Sat 8.00 - 18.00.</li>
-                                 </ol>
-                             </div>
                          </div>
                      </div>
 
@@ -145,10 +137,10 @@ function googleTranslateElementInit() {
          </div>
      </section>
 
-     <section class="mab-01">
-         <iframe style="width:100%"
-             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d249759.19784092825!2d79.10145254589841!3d12.009924873581818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1448883859107"
-             height="450" frameborder="0" allowfullscreen=""></iframe>
+     <section class="mab-01" id="loc">
+           <div class="map-overlay">
+                <div id="map"></div>
+              </div>
      </section>
 
   <section class="_ng_cs_we_rw">
@@ -185,4 +177,5 @@ function googleTranslateElementInit() {
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
+<script src="assets/js/loc.js"></script>
 </html>
