@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/all.min.css">
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script type='text/javascript'
     src='https://maps.googleapis.com/maps/api/js?sensor=true&libraries=places,weather'></script>
 <script type="text/javascript">
@@ -92,13 +93,13 @@ function googleTranslateElementInit() {
                                      <div class="form-group">
                                          <div class="form-sup">
                                              <div class="cal-01">
-                                                 <input type="name" name="name" id="" class="form-control"
+                                                 <input type="name" name="name" id="name" class="form-control"
                                                      placeholder="Enter Your Name">
                                                  <i class="fal fa-user-tie"></i>
                                              </div>
 
                                              <div class="cal-01">
-                                                 <input type="phone" name="phone" id="" class="form-control"
+                                                 <input type="phone" name="phone" id="no" class="form-control"
                                                      placeholder="Phone Number">
                                                  <i class="fal fa-phone"></i>
                                              </div>
@@ -108,12 +109,12 @@ function googleTranslateElementInit() {
                                      <div class="form-group">
                                          <div class="form-sup">
                                              <div class="cal-01">
-                                                 <input type="email" name="email" id="" class="form-control"
+                                                 <input type="email" name="email" id="email" class="form-control"
                                                      placeholder="Enter Your Email">
                                                  <i class="fal fa-at"></i>
                                              </div>
                                              <div class="cal-01">
-                                                 <input type="text" name="subject" id="" class="form-control"
+                                                 <input type="text" name="subject" id="med" class="form-control"
                                                      placeholder="Medicine">
                                                  <i class="fal fa-envelope-open-text"></i>
                                              </div>
@@ -121,13 +122,14 @@ function googleTranslateElementInit() {
                                      </div>
 
                                      <div class="ca-ool">
-                                         <textarea name="text" cols="80" rows="6" class="form-control"
+                                         <textarea name="text" cols="80" rows="6" class="form-control" id="address"
                                              placeholder="Address"></textarea>
                                      </div>
                                  </div>
+                                 <br>
                              </form>
+                             <div id="req_sum">Submit</div>
                              <br>
-                            <div id="req_sum">Sumit</div>
                          </div>
                      </div>
                  </div>
@@ -138,7 +140,7 @@ function googleTranslateElementInit() {
      <section class="mab-01" id="loc">
            <div class="map-overlay">
                 <div id="map"></div>
-              </div>
+            </div>
      </section>
 
 
@@ -179,4 +181,5 @@ function googleTranslateElementInit() {
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/script.js"></script>
 <script src="assets/js/loc.js"></script>
+<script src="assets/js/res.js"></script>
 </html>
