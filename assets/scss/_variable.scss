@@ -1,0 +1,38 @@
+$color-primary:#fff;
+$text-primary:#222222;
+$content-color:#373738;
+$icons-color:#fd1b5b;
+
+@import url(https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap);
+
+@mixin shado-1(){
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+@mixin shado-3 {
+    box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65), 0 2px 6px 0 rgba(206, 206, 238, 0.54);
+}
+@mixin shado-4(){
+    box-shadow:  0 2px 3px 0 rgba(218, 218, 253, 0.35), 0 0px 3px 0 rgba(206, 206, 238, 0.35);
+}
+
+@mixin shado-5(){
+    box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65), 0 2px 6px 0 rgba(206, 206, 238, 0.54);
+}
+
+@mixin card-1(){
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border-radius:2px;
+}
+
+@mixin shado-6 {
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.10);
+}
+
+@mixin heading{
+    font-size:35px;
+    color:$icons-color;
+    line-height:50px;
+    font-weight:700;
+    text-transform:uppercase;
+}

@@ -1,0 +1,128 @@
+footer {
+    padding:40px 0px;
+    background:#1c1d1e;
+    position:relative;
+    overflow:hidden;
+
+    ._pl_we_sq {
+        margin:30px 0 0 0;
+        border-top:1px solid #565655;
+        padding:20px 0 0;
+        color:$color-primary;
+
+        .last-01 {
+            position:relative;
+            direction:inline-block;
+
+            p {
+                letter-spacing:0.5px;
+                font-size:16px;
+                margin:0px;
+
+                a {
+                    margin: 0 10px;
+                    font-size: 17px;
+                    letter-spacing: 0.6px;
+                    font-weight: 600;
+                    color: $icons-color;
+                }
+
+            }
+        }
+    }
+
+    ._kl_ds_we {
+        margin:20px 0px;
+        padding:10px 8px;
+        position:relative;
+        color:$color-primary;
+
+        .head-footer {
+            display:block;
+            position:relative;
+
+            .un-hover {
+                li {
+                    cursor: default;
+                }
+
+                li {
+                    &:hover {
+                        color:$icons-color;
+                        letter-spacing:0px;
+                        i {
+                            color: $icons-color;
+                        }
+                    }
+                }
+            }
+
+            ul {
+                li {
+                    display:block;
+                    padding:10px 0px;
+                    color:$color-primary;
+                    cursor:pointer;
+                    position: relative;
+                    padding-left:25px;
+                    transition:0.7s;
+
+                    &:hover {
+                        color:$icons-color;
+                        letter-spacing:1px;
+                        i {
+                            color: $icons-color;
+                        }
+                    }
+
+                    i {
+                        padding-right: 10px;
+                        color: $color-primary;
+                        position:absolute;
+                        left:0;
+                        margin:5px 0 0;
+                    }
+                }
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 25px;
+                color: $color-primary;
+                margin: 10px 0px;
+            }
+
+            ol {
+                li {
+                    display: inline-block;
+                    height:30px;
+                    width:30px;
+                    line-height:30px;
+                    text-align:center;
+                    background-color:$icons-color;
+                    border-radius:3px;
+                    color:$color-primary;
+                }
+            }
+
+            h3 {
+                padding:0 0 10px 0;
+                position:relative;
+                font-size:18px;
+                font-weight:600;
+                text-transform:uppercase;
+                margin: 0 0 17px 0;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 50px;
+                    background: $icons-color;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+    } 
+}

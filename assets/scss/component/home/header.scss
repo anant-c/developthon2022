@@ -1,0 +1,179 @@
+header {
+    .my-nav {
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        padding: 10px 0px;
+        -webkit-box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .15);
+        box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .15);
+    }
+
+    .sub-01 {
+        position: relative;
+        background: $icons-color;
+    }
+
+    .nav-items {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1 1 100%;
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        align-items:center;
+
+        .menu-toggle {
+            position: absolute;
+            top: 30px;
+            right: 0.9375rem;
+            transition: ease-in-out 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+
+            @media screen and(max-width:767.98px) {
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .menu-hamburger {
+                width: 1.875rem;
+                height: 0.125rem;
+                transition: ease-in-out 0.1s;
+                box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+                background: $icons-color;
+                position: relative;
+
+                &.active {
+                    background: rgba(0, 0, 0, 0);
+                    box-shadow: none;
+
+                    &::after {
+                        transform: rotate(45deg);
+                    }
+
+                    &::before {
+                        transform: rotate(135deg);
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 1.875rem;
+                    height: 0.125rem;
+                    transition: ease-in-out 0.1s;
+                    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+                    background:$icons-color;
+                    transform: translatey(-0.625rem);
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 1.875rem;
+                    height: 0.125rem;
+                    transition: ease-in-out 0.1s;
+                    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.6);
+                    background: $icons-color;
+                    transform: translatey(0.625rem);
+                }
+            }
+        }
+
+        .logo {
+            width: 30%;
+            flex: 1 1 30%;
+            max-width: 280px;
+
+            @media screen and(max-width:767.98px) {
+                width: 80%;
+                flex: 1 1 80%;
+                max-width: 80%;
+
+            }
+        }
+
+        .menu-items {
+            width: 70%;
+            flex: 1 1 70%;
+            max-width: 70%;
+            position: relative;
+            align-items: center;
+            justify-content: flex-end;
+
+            @media screen and(max-width:767.98px) {
+                width: 100%;
+                flex: 1 1 100%;
+                max-width: 100%;
+
+            }
+
+            .menu {
+                display: block;
+                width: 100%;
+                text-align: right;
+
+                &.active {
+                    opacity: 1;
+                    visibility: visible;
+                    display: block;
+                    transition: ease-in-out 0.9s;
+                }
+
+                @media screen and(max-width:767.98px) {
+                    text-align: left;
+                    opacity: 0;
+                    visibility: hidden;
+                    display: none;
+                }
+
+                ul {
+                    li {
+                        display: inline-block;
+                        padding: 0.625rem;
+
+                        @media screen and(max-width:767.98px) {
+                            display: block;
+                        }
+
+                        a {
+                            color: $text-primary;
+                            padding: 0 1.25rem;
+                            font-weight: 700;
+
+                            &:hover{
+                                color:$icons-color;
+                            }
+
+                            @media screen and(max-width:767.98px) {
+                                padding: 0rem;
+                            }
+
+                            @media (min-width: 768px) and (max-width: 991.98px) {
+                                padding: 0 0.625rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.og-hf {
+    position: fixed;
+    transition: ease-in-out 0.5s;
+    width: 100%;
+    z-index: 999;
+    left: 0;
+    top: 0;
+
+    .my-nav {
+        background:$color-primary;
+    }
+}
