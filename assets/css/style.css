@@ -910,5 +910,7 @@ footer {
           height: 2px;  
           bottom: 0;  
           left: 0; }
-
+.svgclass{
+  margin-top: 10px;
+}
 /*# sourceMappingURL=style.css.map */
