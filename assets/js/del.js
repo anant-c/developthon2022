@@ -3,24 +3,32 @@ var s2='';
 var s3='';
 
 function data() {
-    $.getJSON("https://localhost:3001/medicines", function(data) {
+    $.getJSON("http://localhost:3001/medicines", function(data) {
         var tabledata = '';
         $.each(data, function(x, y) {
         	tabledata += '<tr><td>'+data[x].name + '</td>';
         	tabledata += '<td>'+data[x].address + '</td>';
         	tabledata += '<td>'+data[x].phoneNumber + '</td>';
-        	tabledata += '<td id='+data[x].phoneNumber+' name='+data[x].name+' add='+data[x].address+' ph='+data[x].phoneNumber+' onclick="getdata(this)">Select this</td></tr>';
+        	tabledata += '<td id='+data[x].phoneNumber+' class="sthis" name='+data[x].name+' add='+data[x].address+' ph='+data[x].phoneNumber+' onclick="getdata(this)">Select this</td></tr>';
         });
         $("#resq").empty().append(tabledata);
     });
 }
 
+data();
+
 function getdata(x) {
-	s1=x.name;
-	s2=x.add;
-	s3=x.ph;
-	$(x.id).html("Selected");
-	$(x.id).css("background-color":"#ddd");
+	s1=$(x).attr("name");
+	s2=$(x).attr("add");
+	s3=$(x).attr("ph");
+	console.log(s1);
+	var cdd = document.querySelectorAll('.sthis');
+	for(var i = 0; i < cdd.length; i++) {
+	  cdd[i].style.backgroundColor="#fff";
+	  cdd[i].innerHTML="Select this";
+	}
+	$(x).html("Selected");
+	$(x).css("background-color","#ddd");
 }
 
 $( "#req_sum" ).click(function() {
