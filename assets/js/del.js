@@ -9,7 +9,7 @@ function data() {
         	tabledata += '<tr><td>'+data[x].name + '</td>';
         	tabledata += '<td>'+data[x].address + '</td>';
         	tabledata += '<td>'+data[x].phoneNumber + '</td>';
-        	tabledata += '<td id='+data[x].phoneNumber+' class="sthis" name='+data[x].name+' add='+data[x].address+' ph='+data[x].phoneNumber+' onclick="getdata(this)">Select this</td></tr>';
+        	tabledata += '<td id='+data[x].phoneNumber+' class="sthis" name="'+data[x].name+'" add="'+data[x].address+'" ph="'+data[x].phoneNumber+'" onclick="getdata(this)">Select this</td></tr>';
         });
         $("#resq").empty().append(tabledata);
     });
@@ -48,7 +48,9 @@ $( "#req_sum" ).click(function() {
             'Content-Type': 'application/json',
         }
     }
-    ) } else {
+    )
+	alert("Subitted");
+	 } else {
 		alert("Select medicine request first");
     }
 });

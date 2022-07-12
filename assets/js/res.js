@@ -25,4 +25,5 @@ $( "#req_sum" ).click(function() {
         }
     }
     )
+	alert("Subitted");
 });
