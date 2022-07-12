@@ -43,7 +43,7 @@ $( "#req_sum" ).click(function() {
 	    'pickerName': value1,
 	    'pickerPhone': value2,
 	}
-	axios.post('http://localhost:3001/api', payload, {
+	axios.post('http://localhost:3001/apid', payload, {
         headers: {
             'Content-Type': 'application/json',
         }
